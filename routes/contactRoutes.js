@@ -10,13 +10,7 @@ const {
 
 const authMiddleware = require("../middleware/authMiddleware");
 
-
-
 router.post("/", createContact);
-
-
-
-
 router.get("/admin", authMiddleware, getContacts);
 
 router.put("/admin/:id", authMiddleware, updateContactStatus);

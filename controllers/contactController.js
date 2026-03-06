@@ -3,11 +3,6 @@ const Settings = require("../models/settings");
 const nodemailer = require("nodemailer");
 const CryptoJS = require("crypto-js");
 
-
- ================================
-   CREATE CONTACT (PUBLIC)
-================================ */
-
 exports.createContact = async (req, res) => {
 
     try {
@@ -106,11 +101,6 @@ exports.createContact = async (req, res) => {
 };
 
 
-
- ================================
-   GET ALL CONTACTS (ADMIN)
-================================ */
-
 exports.getContacts = async (req, res) => {
 
     try {
@@ -143,12 +133,6 @@ exports.getContacts = async (req, res) => {
     }
 
 };
-
-
-
- ================================
-   UPDATE CONTACT STATUS
-================================ */
 
 exports.updateContactStatus = async (req, res) => {
 
@@ -191,11 +175,6 @@ exports.updateContactStatus = async (req, res) => {
 
 };
 
-
-
- ================================
-   DELETE CONTACT
-================================ */
 
 exports.deleteContact = async (req, res) => {
 

@@ -79,7 +79,7 @@ exports.getCaseStudies = async (req, res) => {
             filter.$text = { $search: req.query.search };
         }
 
-        
+
         if (req.query.random === "true") {
 
             const caseStudies = await CaseStudy.aggregate([
@@ -94,7 +94,7 @@ exports.getCaseStudies = async (req, res) => {
             });
         }
 
-        
+
 
         const total = await CaseStudy.countDocuments(filter);
 
