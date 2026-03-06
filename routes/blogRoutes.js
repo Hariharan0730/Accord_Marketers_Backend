@@ -18,9 +18,6 @@ const {
 const upload = require("../middleware/uploadMiddleware");
 const authMiddleware = require("../middleware/authMiddleware");
 
- =======================================================
-   🔐 ADMIN ROUTES (Always Above Public Dynamic Routes)
-======================================================= */
 
 
 router.get("/stats", authMiddleware, getDashboardStats);
@@ -53,9 +50,6 @@ router.put("/:id/featured", authMiddleware, toggleFeatured);
 router.delete("/:id", authMiddleware, deleteBlog);
 
 
- =======================================================
-   🌐 PUBLIC ROUTES (Keep Dynamic Slug Last)
-======================================================= */
 router.get("/", getAllBlogs);
 
 router.post("/:slug/view", incrementView); 
